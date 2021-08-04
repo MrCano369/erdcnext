@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "bulma": "^0.9.3",
     "mongodb": "^3.5.9",
     "next": "latest",
     "react": "^17.0.2",

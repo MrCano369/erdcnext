@@ -1,0 +1,28 @@
+html {
+  overflow: auto;
+}
+
+.activityHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.day {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #00d1b2;
+  margin: 4px;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.daysContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
