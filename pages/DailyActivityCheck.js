@@ -14,7 +14,7 @@ export default function DailyActivityCheck({ activities: initialActivities }) {
 
   const createActivity = async (title) => {
     const res = await post(
-      "http://localhost:3000/api/DailyActivityCheck/createActivity",
+      "https://erdcnext.vercel.app/api/DailyActivityCheck/createActivity",
       { activityTitle: title }
     );
     if (res.err) return alert(res.err);
@@ -23,7 +23,7 @@ export default function DailyActivityCheck({ activities: initialActivities }) {
 
   const deleteActivity = async (id) => {
     const res = await post(
-      "http://localhost:3000/api/DailyActivityCheck/deleteActivity",
+      "https://erdcnext.vercel.app/api/DailyActivityCheck/deleteActivity",
       { activityId: id }
     );
 
@@ -33,14 +33,14 @@ export default function DailyActivityCheck({ activities: initialActivities }) {
 
   const getActivities = async () => {
     const res = await get(
-      "http://localhost:3000/api/DailyActivityCheck/getActivities"
+      "https://erdcnext.vercel.app/api/DailyActivityCheck/getActivities"
     );
     setActivities(res);
   };
 
   const checkToday = async (id) => {
     const res = await post(
-      "http://localhost:3000/api/DailyActivityCheck/checkToday",
+      "https://erdcnext.vercel.app/api/DailyActivityCheck/checkToday",
       { activityId: id }
     );
 
@@ -83,7 +83,7 @@ export default function DailyActivityCheck({ activities: initialActivities }) {
 
 export async function getServerSideProps() {
   const activities = await fetch(
-    "http://localhost:3000/api/DailyActivityCheck/getActivities"
+    "https://erdcnext.vercel.app/api/DailyActivityCheck/getActivities"
   ).then((res) => res.json());
   return {
     props: { activities },
